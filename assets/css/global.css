@@ -1,0 +1,47 @@
+@import "/assets/css/conteudo.css";
+@import "/assets/css/funcional.css";
+
+:root {
+  --v8: #082b34;
+  --v7: #17434e;
+  --v6: #2a5a69;
+  --v5: #366b77;
+  --v4: #548a92;
+  --v3: #91b9bc;
+  --v2: #ebf1f1;
+  --v1: #f6f9fa;
+  --s1: #e08161;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI";
+  box-sizing: border-box;
+  background-color: var(--v7);
+}
+
+a {
+  text-decoration: none;
+  color: var(--v1);
+  display: inline-block;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
