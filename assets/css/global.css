@@ -1,5 +1,7 @@
 @import "/assets/css/conteudo.css";
-@import "/assets/css/funcional.css";
+@import "/assets/css/utilitario.css";
+@import "/assets/css/chat.css";
+@import "/assets/css/typing.css";
 
 :root {
   --v8: #082b34;
