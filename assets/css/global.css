@@ -1,7 +1,6 @@
 @import "/assets/css/conteudo.css";
 @import "/assets/css/utilitario.css";
 @import "/assets/css/chat.css";
-@import "/assets/css/typing.css";
 
 :root {
   --v8: #082b34;
@@ -13,6 +12,10 @@
   --v2: #ebf1f1;
   --v1: #f6f9fa;
   --s1: #e08161;
+  --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --msger-bg: #fff;
+  --left-msg-bg: linear-gradient(to right, #f895b9, #f44183);
+  --right-msg-bg: #ececec;
 }
 
 body {
