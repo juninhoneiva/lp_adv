@@ -72,9 +72,10 @@
       $.ajax({
         url: 'message.php',
         type: 'POST',
-        data: 'text =' +$value,
+        data: 'text=' +$value,
         success: function(result){
-
+          $replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user c-v1"></i></div><div class="msg-header"><p class="font-s c-v1">'+ result +'</p>';
+          $(".form").append($replay);
         }
       });
     });
