@@ -22,7 +22,8 @@
 
 #trabalhista {
   width: 100%;
-  box-shadow: 0px 1px 15px -10px rgba(0, 0, 0, 0.5);
+  padding-top: 80px;
+  box-shadow: 0px 1px 15px -8px rgba(0, 0, 0, 0.5);
 }
 
 .trabalhista-container {
@@ -30,7 +31,6 @@
   width: 100%;
   margin: 0 auto;
   display: grid;
-  padding-top: 80px;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
 }
@@ -46,11 +46,161 @@
 
 .chatbot {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  height: 350px;
-  width: 250px;
+  bottom: 15px;
+  right: 15px;
+  z-index: 5;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--v1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dddddd;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+}
+
+.wrapper {
+  width: 370px;
   background-color: var(--v1);
   border-radius: 5px;
   box-shadow: 0px 1px 15px -10px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper .title {
+  background-color: var(--v6);
+  font-size: 1.3rem;
+  padding: 5px 0;
+  border-radius: 3px 3px 0 0;
+}
+
+.title h5,
+.title p {
+  margin-left: 20px;
+}
+
+.wrapper .title p {
+  font-size: 12px;
+}
+
+.wrapper .form {
+  padding: 20px 15px;
+  min-height: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.wrapper .form .inbox {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: end;
+}
+
+.wrapper .form .user-inbox {
+  justify-content: flex-end;
+  margin: 12px 0;
+}
+
+.wrapper .form .inbox .icon {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: var(--v6);
+}
+
+.wrapper .form .inbox .msg-header {
+  max-width: 60%;
+}
+
+.wrapper .form .inbox .msg-header p {
+  padding: 8px 10px;
+  background: var(--g1);
+  border-radius: 15px 15px 15px 0;
+}
+
+.wrapper .form .user-inbox .msg-header p {
+  padding: 8px 10px;
+  background: var(--g2);
+  border-radius: 15px 15px 0 15px;
+}
+
+.wrapper .typing-field {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--v2);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 3px 3px;
+}
+
+.wrapper .typing-field .input-data {
+  height: 40px;
+  width: 335px;
+  position: relative;
+}
+
+.wrapper .typing-field .input-data input {
+  height: 100%;
+  width: 72%;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 15px;
+  background-color: #ffffff;
+  padding: 0 80px 0 15px;
+  box-shadow: 0px 1px 15px -10px rgba(0, 0, 0, 0.5);
+  transition: all ease 0.3s;
+}
+
+.wrapper .typing-field .input-data button {
+  position: absolute;
+  height: 30px;
+  width: 65px;
+  border: 1px solid var(--v5);
+  border-radius: 3px;
+  color: var(--v1);
+  background: var(--v6);
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  text-transform: uppercase;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-47%);
+  transition: all ease 0.3s;
+}
+.wrapper .typing-field .input-data input:valid ~ button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .typing-field .input-data input:focus {
+  border-color: var(--v3);
+}
+.wrapper .typing-field .input-data input::placeholder {
+  color: #cfcfcf;
+  transition: all ease 0.3s;
+}
+.wrapper .typing-field .input-data input:focus::placeholder {
+  color: #c1c1c1;
+}
+
+.wrapper .typing-field .input-data button:hover {
+  background: var(--v7);
+  color: var(--v2);
 }

@@ -1,6 +1,5 @@
 @import "/assets/css/conteudo.css";
 @import "/assets/css/utilitario.css";
-@import "/assets/css/chat.css";
 
 :root {
   --v8: #082b34;
@@ -12,10 +11,16 @@
   --v2: #ebf1f1;
   --v1: #f6f9fa;
   --s1: #e08161;
-  --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  --msger-bg: #fff;
-  --left-msg-bg: linear-gradient(to right, #f895b9, #f44183);
-  --right-msg-bg: #ececec;
+  --g1: linear-gradient(
+    145deg,
+    rgba(78, 132, 144, 1) 0%,
+    rgba(93, 147, 156, 1) 100%
+  );
+  --g2: linear-gradient(
+    145deg,
+    rgba(226, 220, 220, 1) 0%,
+    rgba(235, 241, 241, 1) 100%
+  );
 }
 
 body {
@@ -38,6 +43,12 @@ li {
 }
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
 p,
 ul,
 li,
