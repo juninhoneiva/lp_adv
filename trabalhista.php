@@ -8,7 +8,8 @@
   <title>Ailton Neiva Jr - Advogado Trabalhista</title>
 
   <link rel="stylesheet" href="/assets/css/global.css">
-  <script src="https://kit.fontawesome.com/74e357ec41.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/74e357ec41.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 
 <body>
@@ -49,49 +50,36 @@
             <p class="font-s c-v1">Olá, bem-vindo(a) ao nosso escritório de advocacia. Como podemos ajudá-lo?</p>
           </div>
         </div>
-        <div class="user-inbox inbox">
-          <div class="msg-header">
-            <p class="font-s c-v6">Olá, obrigado. Preciso de um Advogado Trabalhista.</p>
-          </div>
-        </div>
-        <div class="bot-inbox inbox">
-          <div class="icon">
-            <i class="fas fa-user c-v1"></i>
-          </div>
-          <div class="msg-header">
-            <p class="font-s c-v1">Olá, bem-vindo(a) ao nosso escritório de advocacia. Como podemos ajudá-lo?</p>
-          </div>
-        </div>
-        <div class="user-inbox inbox">
-          <div class="msg-header">
-            <p class="font-s c-v6">Olá, obrigado. Preciso de um Advogado Trabalhista.</p>
-          </div>
-        </div>
-        <div class="bot-inbox inbox">
-          <div class="icon">
-            <i class="fas fa-user c-v1"></i>
-          </div>
-          <div class="msg-header">
-            <p class="font-s c-v1">Olá, bem-vindo(a) ao nosso escritório de advocacia. Como podemos ajudá-lo?</p>
-          </div>
-        </div>
-        <div class="user-inbox inbox">
-          <div class="msg-header">
-            <p class="font-s c-v6">Olá, obrigado. Preciso de um Advogado Trabalhista.</p>
-          </div>
-        </div>
       </div>
       <div class="typing-field">
         <div class="input-data">
-          <input type="text" placeholder="Digite sua mensagem..." required>
-          <button>Enviar</button>
+          <input id="data" type="text" placeholder="Digite sua mensagem..." required>
+          <button id="send-btn">Enviar</button>
         </div>
       </div>
     </div>
   </section>
 
 </body>
+<script>
+  $(document).ready(function () {
+    $("#send-btn").on("click", function () {
+      $value = $("#data").val();
+      $msg = '<div class="user-inbox inbox"><div class="msg-header"><p class="font-s c-v6">' + $value + '</p></div></div>';
+      $(".form").append($msg);
+      $("#data").val('');
 
+      $.ajax({
+        url: 'message.php',
+        type: 'POST',
+        data: 'text =' +$value,
+        success: function(result){
+
+        }
+      });
+    });
+  });
+</script>
 <script src="/assets/js/main.js"></script>
 
 </html>
