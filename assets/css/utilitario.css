@@ -1,0 +1,68 @@
+.p-btn a {
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 2px 0 4px -3px rgba(0, 0, 0, 0.5);
+  background-color: var(--v5);
+  text-transform: uppercase;
+  transition: ease-in 0.3s;
+}
+
+.p-btn a:hover {
+  background-color: var(--v6);
+  color: var(--v3);
+}
+
+.s-btn a {
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 2px 0 4px -3px rgba(0, 0, 0, 0.5);
+  border: solid 1px var(--v1);
+  text-transform: uppercase;
+  transition: ease-in 0.3s;
+}
+
+.s-btn a:hover {
+  color: var(--v3);
+  border-color: var(--v3);
+}
+
+.font-xl {
+  font-size: 2rem;
+}
+
+.font-m {
+  font-size: 1rem;
+}
+
+.font-s {
+  font-size: 0.8rem;
+}
+
+.c-v1 {
+  color: var(--v1);
+}
+.c-v2 {
+  color: var(--v2);
+}
+.c-v3 {
+  color: var(--v3);
+}
+.c-v4 {
+  color: var(--v4);
+}
+.c-v5 {
+  color: var(--v5);
+}
+.c-v6 {
+  color: var(--v6);
+}
+.c-v7 {
+  color: var(--v7);
+}
+.c-v8 {
+  color: var(--v8);
+}
+
+.c-s1 {
+  color: var(--s1);
+}
