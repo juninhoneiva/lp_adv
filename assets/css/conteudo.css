@@ -128,7 +128,7 @@
   padding: 8px 10px;
   background: var(--g1);
   border-radius: 15px 15px 15px 0;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .wrapper .form .user-inbox .msg-header p {

@@ -7,7 +7,17 @@
   transition: ease-in 0.3s;
 }
 
-.p-btn a:hover {
+.bot-inbox a {
+  padding: 5px 10px;
+  border-radius: 50px;
+  box-shadow: 2px 0 4px -3px rgba(0, 0, 0, 0.5);
+  background-color: var(--v5);
+  text-transform: uppercase;
+  transition: ease-in 0.3s;
+}
+
+.p-btn a:hover,
+.bot-inbox a:hover {
   background-color: var(--v6);
   color: var(--v3);
 }
