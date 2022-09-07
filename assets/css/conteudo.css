@@ -115,13 +115,15 @@
   width: 40px;
   height: 40px;
   text-align: center;
-  line-height: 40px;
+  line-height: 48px;
   border-radius: 50%;
+  font-size: 24px;
+  color: var(--v1);
   background: var(--g1);
 }
 
 .wrapper .form .inbox .msg-header {
-  max-width: 60%;
+  max-width: 70%;
 }
 
 .wrapper .form .inbox .msg-header p {
