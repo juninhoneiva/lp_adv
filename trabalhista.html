@@ -74,8 +74,9 @@
         type: 'POST',
         data: 'text=' + $value,
         success: function (result) {
-          $replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user c-v1"></i></div><div class="msg-header"><p class="font-s c-v1">' + result + '</p>';
+          $replay = '<div class="bot-inbox inbox"><div class="icon"><img src="/assets/img/bot.png" height="30px" width="30px" alt=""><i class="fas fa-user c-v1"></i></div><div class="msg-header"><p class="font-s c-v1">' + result + '</p>';
           $(".form").append($replay);
+          $(".form").scrollTop($(".form")[0].scrollHeight);
         }
       });
     });
