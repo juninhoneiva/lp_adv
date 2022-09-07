@@ -11,7 +11,7 @@ if(mysqli_num_rows($run_query) > 0){
     $replay = $fetch_data['replies'];
     echo $replay;
 }else{
-  echo "Desculpe, sou apenas uma assistente virtual. Tente perguntar outra coisa ou converse agora com um Advogado pelo WhatsApp. <br><br>
+  echo "Desculpe, sou apenas um assistente virtual. Tente perguntar outra coisa ou converse agora com um Advogado pelo WhatsApp. <br><br>
   <a href='https://wa.me/553135328456' target='_blank'> FALAR COM ADVOGADO </a>";
 }
 
