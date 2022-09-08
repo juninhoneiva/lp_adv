@@ -1,5 +1,6 @@
 @import "/assets/css/conteudo.css";
 @import "/assets/css/utilitario.css";
+@import "/assets/css/chat.css";
 
 :root {
   --v8: #082b34;
@@ -22,11 +23,14 @@
     rgba(235, 241, 241, 1) 100%
   );
 }
+html {
+  scroll-behavior: smooth;
+  font-family: Helvetica, sans-serif, Arial;
+}
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI";
   box-sizing: border-box;
   background-color: var(--v7);
 }
