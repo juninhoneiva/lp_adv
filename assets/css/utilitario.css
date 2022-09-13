@@ -18,22 +18,24 @@
 
 .p-btn a:hover,
 .bot-inbox a:hover {
-  background-color: var(--v6);
-  color: var(--v3);
+  background-color: var(--v7);
+  color: var(--v2);
 }
 
 .s-btn a {
   padding: 10px 20px;
   border-radius: 50px;
   box-shadow: 2px 0 4px -3px rgba(0, 0, 0, 0.5);
-  border: solid 1px var(--v1);
+  border: solid 1px var(--v5);
+  color: var(--v5);
   text-transform: uppercase;
   transition: ease-in 0.3s;
 }
 
 .s-btn a:hover {
-  color: var(--v3);
-  border-color: var(--v3);
+  color: var(--v7);
+  background-color: var(--v2);
+  border-color: var(--v7);
 }
 
 .font-xl {

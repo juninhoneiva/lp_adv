@@ -4,11 +4,9 @@ const header = document.querySelector(".chat-header");
 
 header.addEventListener("click", () => {
   container.classList.toggle("active");
-  if (container.classList.contains("active"))
-    setTimeout(() => {
-      firstBotMessage();
-    }, 1000);
 });
+
+// Get Time
 
 function getTime() {
   let today = new Date();
@@ -29,8 +27,15 @@ function getTime() {
 
 // Gets the first message
 function firstBotMessage() {
-  let firstMessage =
-    "Olá, precisando de um Advogado Trabalhista? Será um prazer ajudar!";
-  document.getElementById("bot-msg-one").innerHTML =
-    "<span>" + firstMessage + "</span>";
+  const firstBot = document.getElementById("chat-box");
+  firstBot.insertAdjacentHTML(
+    "beforeend",
+    "<div class='bot-msg' id='bot-msg'><img src='/assets/img/bot.png' height='50px' width='50px'><span >Olá, bem-vindo(a) à Resende e Neiva Advocacia Trabalhista!</span></div>"
+  );
+  const secondBot = document.getElementById("chat-box");
+  secondBot.insertAdjacentHTML(
+    "beforeend",
+    "<div class='bot-msg' id='bot-msg'><img src='/assets/img/bot.png' height='50px' width='50px'><span >Se quiser falar com um advogado especialista, me diga o seu <strong>NOME</strong>.</span></div>"
+  );
 }
+firstBotMessage();
