@@ -1,19 +1,12 @@
-// Collapsible
-var coll = document.getElementsByClassName("collapsible");
+// Toggle Chat Window
+const container = document.querySelector(".chat-container");
+const header = document.querySelector(".chat-header");
 
-for (let i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function () {
-    this.classList.toggle("active");
+header.addEventListener("click", () => {
+  container.classList.toggle("active");
+});
 
-    var content = this.nextElementSibling;
-
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
+setTimeout(firstBotMessage, 1000);
 
 function getTime() {
   let today = new Date();
@@ -32,73 +25,19 @@ function getTime() {
   return time;
 }
 
-// Gets the first message
 function firstBotMessage() {
-  let firstMessage = "How's it going?";
-  document.getElementById("botStarterMessage").innerHTML =
-    '<p class="botText"><span>' + firstMessage + "</span></p>";
-
-  let time = getTime();
-
-  $("#chat-timestamp").append(time);
-  document.getElementById("userInput").scrollIntoView(false);
+  const firstBot = document.getElementById("chat-box");
+  firstBot.insertAdjacentHTML(
+    "beforeend",
+    "<div class='bot-msg' id='bot-msg'><img src='/assets/img/bot.png' height='45px' width='45px'><span>Olá, bem-vindo(a) à Resende e Neiva Advocacia Trabalhista!</span></div>"
+  );
+  setTimeout(secondBotMessage, 1300);
 }
 
-firstBotMessage();
-
-// Retrieves the response
-function getHardResponse(userText) {
-  let botResponse = getBotResponse(userText);
-  let botHtml = '<p class="botText"><span>' + botResponse + "</span></p>";
-  $("#chatbox").append(botHtml);
-
-  document.getElementById("chat-bar-bottom").scrollIntoView(true);
+function secondBotMessage() {
+  const secondBot = document.getElementById("chat-box");
+  secondBot.insertAdjacentHTML(
+    "beforeend",
+    "<div class='bot-msg' id='bot-msg'><img src='/assets/img/bot.png' height='45px' width='45px'><span>Para falar com um advogado trabalhista agora, me diga o seu <strong>NOME</strong>.</span></div>"
+  );
 }
-
-//Gets the text text from the input box and processes it
-function getResponse() {
-  let userText = $("#textInput").val();
-
-  if (userText == "") {
-    userText = "I love Code Palace!";
-  }
-
-  let userHtml = '<p class="userText"><span>' + userText + "</span></p>";
-
-  $("#textInput").val("");
-  $("#chatbox").append(userHtml);
-  document.getElementById("chat-bar-bottom").scrollIntoView(true);
-
-  setTimeout(() => {
-    getHardResponse(userText);
-  }, 1000);
-}
-
-// Handles sending text via button clicks
-function buttonSendText(sampleText) {
-  let userHtml = '<p class="userText"><span>' + sampleText + "</span></p>";
-
-  $("#textInput").val("");
-  $("#chatbox").append(userHtml);
-  document.getElementById("chat-bar-bottom").scrollIntoView(true);
-
-  //Uncomment this if you want the bot to respond to this buttonSendText event
-  // setTimeout(() => {
-  //     getHardResponse(sampleText);
-  // }, 1000)
-}
-
-function sendButton() {
-  getResponse();
-}
-
-function heartButton() {
-  buttonSendText("Heart clicked!");
-}
-
-// Press enter to send a message
-$("#textInput").keypress(function (e) {
-  if (e.which == 13) {
-    getResponse();
-  }
-});
